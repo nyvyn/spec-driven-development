@@ -4,7 +4,7 @@
 * Path: `{project_dir}/specs/{short_date}-{feature_name}/documentation.md`
 
 ## 2. Prerequisite Check
-* Confirm approved Requirements, Design, Tasks, and Test documents exist for the feature.
+* Confirm approved Requirements, Design, and Test documents exist for the feature.
 * Reference requirement IDs and design components where relevant (e.g., for screen names or API endpoints).
 
 ## 3. Document Layout
