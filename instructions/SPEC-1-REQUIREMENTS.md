@@ -45,14 +45,14 @@
 
 ## 4. EARS Syntax Reference
 
-| Pattern              | Syntax                                                        | Description                                         | Example                                                                                   |
-|----------------------|--------------------------------------------------------------|-----------------------------------------------------|-------------------------------------------------------------------------------------------|
-| Ubiquitous           | The (system name) shall (system response)                    | Always active; no condition or trigger              | The mobile phone shall have a mass of less than XX grams.                                 |
-| State-driven         | While (precondition(s)), the (system name) shall (system response) | Active as long as a state is true                   | While there is no card in the ATM, the ATM shall display “insert card to begin”.          |
-| Event-driven         | When (trigger), the (system name) shall (system response)    | Responds to a specific triggering event             | When “mute” is selected, the laptop shall suppress all audio output.                      |
-| Optional feature     | Where (feature is included), the (system name) shall (system response) | Applies only if the system includes a specific feature | Where the car has a sunroof, the car shall have a sunroof control panel on the driver door.|
-| Unwanted behaviour   | If (trigger), then the (system name) shall (system response) | Specifies how the system responds to undesired situations | If an invalid credit card number is entered, then the website shall display a warning message. |
-| Complex              | While (precondition(s)), When (trigger), the (system name) shall (system response) | Combines multiple clauses to express richer behavior | While the aircraft is on ground, when reverse thrust is commanded, the engine shall enable it. |
+| Pattern              | Syntax                                                                             | Description                                               | Example                                                                                        |
+|----------------------|------------------------------------------------------------------------------------|-----------------------------------------------------------|------------------------------------------------------------------------------------------------|
+| Ubiquitous           | The (system name) shall (system response)                                          | Always active; no condition or trigger                    | The mobile phone shall have a mass of less than XX grams.                                      |
+| State-driven         | While (precondition(s)), the (system name) shall (system response)                 | Active as long as a state is true                         | While there is no card in the ATM, the ATM shall display “insert card to begin”.               |
+| Event-driven         | When (trigger), the (system name) shall (system response)                          | Responds to a specific triggering event                   | When “mute” is selected, the laptop shall suppress all audio output.                           |
+| Optional feature     | Where (feature is included), the (system name) shall (system response)             | Applies only if the system includes a specific feature    | Where the car has a sunroof, the car shall have a sunroof control panel on the driver door.    |
+| Unwanted behaviour   | If (trigger), then the (system name) shall (system response)                       | Specifies how the system responds to undesired situations | If an invalid credit card number is entered, then the website shall display a warning message. |
+| Complex              | While (precondition(s)), When (trigger), the (system name) shall (system response) | Combines multiple clauses to express richer behavior      | While the aircraft is on ground, when reverse thrust is commanded, the engine shall enable it. |
 
 For more information on EARS, see [alistairmavin.com/ears](https://alistairmavin.com/ears/).
 
