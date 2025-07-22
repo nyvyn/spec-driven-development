@@ -1,43 +1,15 @@
-# Specification-Driven Development Overview
 
-This document provides guidance for developers on using the specification workflow to systematically develop features using GitHub Copilot's AI capabilities.
+## Path and Naming Convention
 
-## AI Model Selection Strategy
+**Path Format**: `specs/{short_date}-{feature_name}/{document_type}.md`
 
-**For Specification File Creation**: Use **GitHub Edit mode** with the most capable AI model available. At the time of this writing, that is **Claude Sonnet 4**, which excels at structured document creation, requirements analysis, and design thinking.
-
-**For Code and Test Generation**: Use **GitHub Agent mode** with a capable code editing model. At the time of this writing, that is **GPT-4.1**, which provides excellent code generation, debugging, and test automation capabilities.
-
-> **Note**: AI model capabilities evolve rapidly. Always use the most capable model available for each phase of development.
-
-## The Specs Directory Structure
-
-The `specs` directory contains feature specification documents organized by numbered feature sets:
-
-```
-specs/
-├── 001-FeatureName-Requirements.md
-├── 001-FeatureName-Design.md
-├── 001-FeatureName-Tasks.md
-├── 001-FeatureName-Tests.md
-├── 001-FeatureName-Documentation.md
-├── 002-AnotherFeature-Requirements.md
-├── 002-AnotherFeature-Design.md
-└── ...
-```
-
-## Naming Convention
-
-**Format**: `{###}-{feature_name}-{document_type}.md`
-
-- **###**: Zero-padded 3-digit feature number (001, 002, 003...)
-- **feature_name**: PascalCase feature name (e.g., `Evaluator`, `UserAuthentication`)
-- **document_type**: One of: `Requirements`, `Design`, `Tasks`, `Tests`, `Documentation`
+- **{short_date}**: The date of creation, e.g., in `YYYYMMDD` format.
+- **{feature_name}**: A descriptive, PascalCase name for the feature (e.g., `UserAuthentication`).
+- **{document_type}.md**: The type of spec document. One of: `requirements.md`, `design.md`, `tasks.md`, `tests.md`, `documentation.md`.
 
 **Rules**:
-- All files for a feature share the same leading number
-- New features increment the number; never reuse existing numbers
-- Use descriptive, unambiguous feature names
+- Each feature's specification documents are stored in their own directory under `specs`.
+- The directory name is a combination of the date and the feature name.
 
 ## Workflow: Collaborating with GitHub Copilot
 
@@ -47,7 +19,7 @@ Work through each specification file in order, using **GitHub Edit mode with Cla
 
 #### 1. Requirements (SPEC-1-REQUIREMENTS.md)
 1. **Open** the requirements template: `/instructions/SPEC-1-REQUIREMENTS.md`
-2. **Use GitHub Edit mode (Claude Sonnet 4)** to generate `{project}/specs/{###}-{FeatureName}-Requirements.md`
+2. **Use GitHub Edit mode (Claude Sonnet 4)** to generate `specs/{short_date}-{feature_name}/requirements.md`
 3. **Prompt**: "Create requirements for [feature description] following the template"
 4. **Review** generated requirements for:
    - EARS syntax compliance
@@ -58,7 +30,7 @@ Work through each specification file in order, using **GitHub Edit mode with Cla
 #### 2. Design (SPEC-2-DESIGN.md)
 1. **Open** the design template: `/instructions/SPEC-2-DESIGN.md`
 2. **Use GitHub Edit mode (Claude Sonnet 4)** with the approved requirements file in context
-3. **Prompt**: "Create design document for [feature] based on requirements {###}-{FeatureName}-Requirements.md"
+3. **Prompt**: "Create a design document for [feature] based on the requirements in `specs/{short_date}-{feature_name}/requirements.md`"
 4. **Review** generated design for:
    - Architecture diagrams (Mermaid)
    - Component responsibilities
@@ -106,50 +78,6 @@ Once all specification files are complete and reviewed, switch to **GitHub Agent
 #### 6. Generate Implementation Code
 1. **Use GitHub Agent mode (GPT-4.1)** with the Tasks document as primary context
 2. **Include** Requirements and Design documents for reference
-3. **Prompt**: "Generate code implementation following the tasks in {###}-{FeatureName}-Tasks.md"
+3. **Prompt**: "Generate code implementation following the tasks in `specs/{short_date}-{feature_name}/tasks.md`"
 4. **Work through tasks sequentially**, generating:
    - Core implementation files
-   - Configuration files
-   - Helper utilities
-5. **Review and test** each component as generated
-
-#### 7. Generate Test Code
-1. **Use GitHub Agent mode (GPT-4.1)** with the Tests document as primary context
-2. **Include** the generated implementation code for reference
-3. **Prompt**: "Generate test automation code for scenarios in {###}-{FeatureName}-Tests.md"
-4. **Generate**:
-   - Unit tests
-   - Integration tests
-   - BDD step definitions (if using Cucumber/similar)
-5. **Verify** tests pass and provide adequate coverage
-
-## Best Practices
-
-### AI Model Selection
-- **Claude Sonnet 4 (Edit mode)**: Best for requirements analysis, system design, task breakdown, test planning, and documentation
-- **GPT-4.1 (Agent mode)**: Best for code generation, debugging, refactoring, and test automation
-- **Context Management**: Always include relevant specification files when switching between phases
-- **Model Updates**: Monitor for newer, more capable models and update your workflow accordingly
-
-### Collaboration Tips
-- **Always include relevant specification files** in the AI's context when generating code
-- **Reference requirement IDs** in code comments for traceability
-- **Use incremental development**: implement and test core functionality before adding features
-- **Review each generated artifact** before moving to the next phase
-
-### Iteration Strategy
-- **Expect multiple rounds** of refinement for each specification
-- **Use Copilot's chat** to explore alternative approaches during review
-- **Keep specifications updated** as implementation reveals new requirements
-- **Maintain traceability** between specifications and code
-
-## Benefits of This Approach
-
-1. **Systematic Development**: Each phase builds on the previous, ensuring completeness
-2. **Optimized AI Usage**: Different models excel at different tasks - use the right tool for each job
-3. **AI-Assisted Quality**: AI helps maintain consistency and catch gaps
-4. **Traceability**: Clear links from requirements through to implementation
-5. **Reviewability**: Structured documents facilitate team review and approval
-6. **Maintainability**: Changes can be traced back through the specification chain
-
-Follow this workflow to leverage the best AI capabilities while maintaining rigorous software engineering practices.

@@ -3,11 +3,7 @@
 (Only code-focused implementation steps—exclude testing, deployment, or non-coding work.)
 
 ## 1. File Creation
-* Path: `{project}/specs/{###}-{feature_name}-Implementation.md`
-* File name format: The set of files (Requirements, Design, etc.) are grouped by the 
-  leading number, e.g. `001-FeatureName-Requirements.md`, `001-FeatureName-Design.md`, etc.
-* New features should increment the leading number, not reuse existing numbers, 
-  e.g., if `001-FeatureName-Implementation.md` exists, the implementation file for the next feature should be `002-AnotherFeature-Implementation.md`.
+* Path: `{project_dir}/specs/{short_date}-{feature_name}/requirements.md`
 
 ## 2. Prerequisite Check
 * Confirm an approved design document exists; reference its section and requirement IDs.

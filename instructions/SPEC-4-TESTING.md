@@ -3,11 +3,7 @@
 (Behavior-Driven Development scenarios only—exclude implementation or automation details.)
 
 ## 1. File Creation
-* Path: `{project}/specs/{###}-{feature_name}-Tests.md`
-* File name format: The set of files (Requirements, Design, etc.) are grouped by the 
-  leading number, e.g. `001-FeatureName-Requirements.md`, `001-FeatureName-Design.md`, etc.
-* New features should increment the leading number, not reuse existing numbers, 
-  e.g., if `001-FeatureName-Tests.md` exists, the test file for the next feature should be `002-AnotherFeature-Tests.md`.
+* Path: `{project_dir}/specs/{short_date}-{feature_name}/tests.md`
 
 ## 2. Prerequisite Check
 * Ensure approved requirements, design, and task files exist.

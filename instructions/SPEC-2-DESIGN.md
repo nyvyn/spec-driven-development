@@ -3,11 +3,7 @@
 (Separate docs will cover testing and implementation—exclude them here.)
 
 ## 1. File Creation
-* Path: `{project}/specs/{###}-{feature_name}-Design.md`
-* File name format: The set of files (Requirements, Design, etc.) are grouped by the 
-  leading number, e.g. `001-FeatureName-Requirements.md`, `001-FeatureName-Design.md`, etc.
-* New features should increment the leading number, not reuse existing numbers, 
-  e.g., if `001-FeatureName-Design.md` exists, the design file for the next feature should be `002-AnotherFeature-Design.md`.
+* Path: `{project_dir}/specs/{short_date}-{feature_name}/requirements.md`
 
 ## 2. Prerequisite Check
 * Confirm the requirements file exists and is approved.
@@ -32,7 +28,7 @@
 ## Data Models
 ​```mermaid
 classDiagram
-    <domain classes and relations>
+    domain classes and relations
 ​```
 
 ## Error Handling

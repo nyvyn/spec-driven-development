@@ -3,11 +3,7 @@
 (End-user–facing help and reference content only—exclude requirements, design, tests, and implementation details.)
 
 ## 1. File Creation
-* Path: `{project}/specs/{###}-{feature_name}-Documentation.md`
-* File name format: The set of files (Requirements, Design, etc.) are grouped by the 
-  leading number, e.g. `001-FeatureName-Requirements.md`, `001-FeatureName-Design.md`, etc.
-* New features should increment the leading number, not reuse existing numbers, 
-  e.g., if `001-FeatureName-Documentation.md` exists, the user documentation file for the next feature should be `002-AnotherFeature-Documentation.md`.
+* Path: `{project_dir}/specs/{short_date}-{feature_name}/documentation.md`
 
 ## 2. Prerequisite Check
 * Confirm approved Requirements, Design, Tasks, and Test documents exist for the feature.
