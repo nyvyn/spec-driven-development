@@ -1,10 +1,10 @@
-# AI Guidelines for Drafting the BDD Test Scenarios Document
+# AI Guidelines for Drafting the Test Scenarios Document
 
 ## 1. File Creation
 * Path: `{project_dir}/specs/{short_date}-{feature_name}/tests.md`
 
 ## 2. Prerequisite Check
-* Ensure approved requirements, design, and task files exist.
+* Ensure approved requirements and design documents exist.
 * Reference requirement IDs and design components throughout.
 
 ## 3. Document Layout
