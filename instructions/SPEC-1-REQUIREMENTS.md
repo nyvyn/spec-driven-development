@@ -1,7 +1,5 @@
 # AI Guidelines for Drafting the Requirements Document
 
-(Testing, design, and implementation will be captured in separate files—do not include them here.)
-
 ## 1. File Creation
 * Path: `{project_dir}/specs/{short_date}-{feature_name}/requirements.md`
 

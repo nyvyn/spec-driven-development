@@ -1,7 +1,5 @@
 # AI Guidelines for Drafting the Feature Design Document
 
-(Separate docs will cover testing and implementation—exclude them here.)
-
 ## 1. File Creation
 * Path: `{project_dir}/specs/{short_date}-{feature_name}/requirements.md`
 

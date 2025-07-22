@@ -1,7 +1,5 @@
 # AI Guidelines for Drafting the BDD Test Scenarios Document
 
-(Behavior-Driven Development scenarios only—exclude implementation or automation details.)
-
 ## 1. File Creation
 * Path: `{project_dir}/specs/{short_date}-{feature_name}/tests.md`
 

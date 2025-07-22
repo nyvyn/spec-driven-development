@@ -1,7 +1,5 @@
 # AI Guidelines for Drafting the Tasks (Implementation Plan) Document
 
-(Only code-focused implementation steps—exclude testing, deployment, or non-coding work.)
-
 ## 1. File Creation
 * Path: `{project_dir}/specs/{short_date}-{feature_name}/requirements.md`
 

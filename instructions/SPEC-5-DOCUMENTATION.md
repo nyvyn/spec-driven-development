@@ -1,7 +1,5 @@
 # AI Guidelines for Drafting the User Documentation
 
-(End-user–facing help and reference content only—exclude requirements, design, tests, and implementation details.)
-
 ## 1. File Creation
 * Path: `{project_dir}/specs/{short_date}-{feature_name}/documentation.md`
 
