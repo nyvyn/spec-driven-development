@@ -1,4 +1,4 @@
-Welcome to the Spec-Driven Development project! 👋
+Welcome to Spec-Driven Development! 👋
 
 This project contains instructions for a structured, step-by-step approach to building software using modern AI
 assistants. It's all part of the **spec-driven development movement** that's taking the dev space by storm!
